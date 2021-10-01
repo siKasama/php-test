@@ -1,5 +1,4 @@
 <?php
-
 namespace Live\Collection;
 
 /**
@@ -41,7 +40,7 @@ class MemoryCollection implements CollectionInterface
      */
     public function set(string $index, $value)
     {
-        $this->data[$index] = $value;
+        return $this->data[$index] = $value;
     }
 
     /**
@@ -55,9 +54,9 @@ class MemoryCollection implements CollectionInterface
     /**
      * {@inheritDoc}
      */
-    public function count(): int
+    public function count()
     {
-        return count($this->data) + 1;
+        return count($this->data);
     }
 
     /**
@@ -65,6 +64,6 @@ class MemoryCollection implements CollectionInterface
      */
     public function clean()
     {
-        $this->data = [];
+        return $this->data = [];
     }
 }

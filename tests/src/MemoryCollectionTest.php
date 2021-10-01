@@ -1,5 +1,4 @@
 <?php
-
 namespace Live\Collection;
 
 use PHPUnit\Framework\TestCase;
@@ -13,6 +12,7 @@ class MemoryCollectionTest extends TestCase
     public function objectCanBeConstructed()
     {
         $collection = new MemoryCollection();
+
         return $collection;
     }
 
@@ -62,6 +62,7 @@ class MemoryCollectionTest extends TestCase
     public function newCollectionShouldNotContainItems()
     {
         $collection = new MemoryCollection();
+
         $this->assertEquals(0, $collection->count());
     }
 
@@ -87,6 +88,7 @@ class MemoryCollectionTest extends TestCase
     {
         $collection = new MemoryCollection();
         $collection->set('index', 'value');
+
         $this->assertEquals(1, $collection->count());
 
         $collection->clean();

@@ -2,7 +2,9 @@
 <ruleset name="rules">
     <description>Coding standard</description>
     <rule ref="PSR2"/>
-
+    <rule ref="Generic.Files.LineEndings">
+        <exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
+    </rule>
     <file>src</file>
     <file>tests</file>
 </ruleset>
